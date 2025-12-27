@@ -47,7 +47,7 @@ async def start_command(client: Client, message: Message):
         # assign new channel
         # temp.ASSIGNED_CHANNEL.pop(user_id, None)
 
-        temp.ASSIGNED_CHANNEL[user_id].extend(channel_id) 
+        temp.ASSIGNED_CHANNEL[user_id] = channel_id 
 
         temp.FILE_ID[id] = {"LAZY_FILE": base64_string}
         
