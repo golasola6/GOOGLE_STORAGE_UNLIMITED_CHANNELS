@@ -43,8 +43,10 @@ async def start_command(client: Client, message: Message):
             await message.reply("❌ No channels linked with this file.")
             return
         # reset old channel
-        temp.ASSIGNED_CHANNEL[user_id] = []
+        # temp.ASSIGNED_CHANNEL[user_id] = []
         # assign new channel
+        # temp.ASSIGNED_CHANNEL.pop(user_id, None)
+
         temp.ASSIGNED_CHANNEL[user_id].extend(channel_id) 
 
         temp.FILE_ID[id] = {"LAZY_FILE": base64_string}
