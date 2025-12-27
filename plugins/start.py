@@ -46,7 +46,7 @@ async def start_command(client: Client, message: Message):
         # temp.ASSIGNED_CHANNEL[user_id] = []
         # assign new channel
         # temp.ASSIGNED_CHANNEL.pop(user_id, None)
-
+        print(f"all channels associated with this file is : {channel_id}")
         temp.ASSIGNED_CHANNEL[user_id] = channel_id 
 
         temp.FILE_ID[id] = {"LAZY_FILE": base64_string}
