@@ -149,6 +149,8 @@ class Database:
             channels.update(doc.get("channel_ids", []))
 
         return list(channels)
+    
+
     async def save_user_join(self, user_id, channel_id):
         await self.user_joins.update_one(
             {"user_id": user_id},
