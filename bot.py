@@ -26,11 +26,11 @@ class Bot(Client):
 
     async def start(self):
         # Fetch channels from database
-        lazydeveloper_channels = await db.get_locked_channels()
+        # lazydeveloper_channels = await db.get_locked_channels()
 
-        # Remove duplicates (optional but recommended)
-        lazydeveloper_channels = list(set(lazydeveloper_channels))
-        temp.ASSIGNED_CHANNEL = lazydeveloper_channels
+        # # Remove duplicates (optional but recommended)
+        # lazydeveloper_channels = list(set(lazydeveloper_channels))
+        # temp.ASSIGNED_CHANNEL = lazydeveloper_channels
         
         await super().start()
         usr_bot_me = await self.get_me()
